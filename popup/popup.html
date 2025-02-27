@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>ImageBlock</title>
+  </head>
+  <body>
+    <form id="optionsForm">
+      <div>
+        <h1>Settings</h1>
+        <label>
+          <input type="radio" name="filter" value="none" checked />
+          Block all images
+        </label>
+        <label>
+          <input type="radio" name="filter" value="grayscale" />
+          Allow grayscale images
+        </label>
+        <label>
+          <input type="radio" name="filter" value="all" />
+          Allow all
+        </label>
+      </div>
+
+      <div>
+        <h1>Target</h1>
+        <label>
+          <input type="radio" name="target" value="domain" checked />
+          Domain
+        </label>
+        <label>
+          <input type="radio" name="target" value="url" />
+          This page
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button id="save" type="submit">Save</button>
+      </div>
+    </form>
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>
