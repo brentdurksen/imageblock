@@ -3,7 +3,9 @@
   "name": "ImageBlock",
   "version": "1.0",
 
-  "description": "Selectively block or grayscale all images on websites",
+  "description": "Reduce distractions and enhance wellbeing by hiding all images on the sites you visit, or easily whitelist URLs or domains to show images in calming grayscale or full color. Note: this extension is not intended to save bandwidth. All images are still downloaded when hidden.",
+  "author": "Brent Durksen",
+  "homepage_url": "https://github.com/brentdurksen/imageblock",
 
   "browser_specific_settings": {
     "gecko": {
@@ -13,21 +15,20 @@
   },
 
   "icons": {
-    "48": "icons/48.png"
+    "48": "icons/icon.svg"
   },
 
   "content_scripts": [
     {
       "matches": ["*://*/*"],
       "js": ["imageblock.js"],
-      "css": ["imageblock.css"],
       "run_at": "document_start"
     }
   ],
   "permissions": ["storage", "tabs"],
 
   "browser_action": {
-    "default_icon": "icons/48.png",
+    "default_icon": "icons/icon.svg",
     "default_title": "ImageBlock",
     "default_popup": "popup/popup.html"
   }

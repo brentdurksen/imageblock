@@ -6,38 +6,67 @@
     <title>ImageBlock</title>
   </head>
   <body>
-    <form id="optionsForm">
-      <div>
-        <h1>Settings</h1>
-        <label>
-          <input type="radio" name="filter" value="none" checked />
-          Block all images
-        </label>
-        <label>
-          <input type="radio" name="filter" value="grayscale" />
-          Allow grayscale images
-        </label>
-        <label>
-          <input type="radio" name="filter" value="all" />
-          Allow all
-        </label>
-      </div>
-
-      <div>
-        <h1>Target</h1>
-        <label>
-          <input type="radio" name="target" value="domain" checked />
-          Domain
-        </label>
-        <label>
-          <input type="radio" name="target" value="url" />
-          This page
-        </label>
-      </div>
-
+    <section>
+      <h1>Temporarily</h1>
       <div class="buttons">
-        <button id="save" type="submit">Save</button>
+        <button class="button" id="override_none">None</button>
+        <button class="button" id="override_grayscale">Grayscale</button>
+        <button class="button" id="override_all">All</button>
       </div>
+    </section>
+    <form id="optionsForm">
+      <section>
+        <h1>Add Exception</h1>
+        <div>
+          <h2>Settings</h2>
+          <label>
+            <input
+              id="filter_none"
+              type="radio"
+              name="filter"
+              value="none"
+              checked
+            />
+            Block all images
+          </label>
+          <label>
+            <input
+              id="filter_grayscale"
+              type="radio"
+              name="filter"
+              value="grayscale"
+            />
+            Show images in grayscale
+          </label>
+          <label>
+            <input id="filter_all" type="radio" name="filter" value="all" />
+            Allow all
+          </label>
+        </div>
+
+        <div>
+          <h2>Target</h2>
+          <label>
+            <input
+              id="target_domain"
+              type="radio"
+              name="target"
+              value="domain"
+              checked
+            />
+            Domain
+          </label>
+          <label>
+            <input id="target_url" type="radio" name="target" value="url" />
+            This page
+          </label>
+        </div>
+      </section>
+
+      <section class="buttons">
+        <button class="button" id="save" type="submit">Save</button>
+        <button class="destructiveButton" id="delete">Delete</button>
+      </section>
     </form>
     <script src="popup.js" type="module"></script>
   </body>
